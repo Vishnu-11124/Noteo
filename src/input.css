@@ -11,11 +11,6 @@
     @apply translate-x-1.5 shadow-[0_4px_12px_rgba(0,0,0,0.12)];
   }
 
-  ul li.checked {
-    @apply text-[#888] bg-[#f9f9f9];
-    text-decoration: line-through !important;
-  }
-
   ul li span {
     @apply absolute right-[15px] top-1/2 -translate-y-1/2 w-8 h-8 text-[22px] text-[#999] leading-8 text-center rounded-full transition-all duration-300;
   }
@@ -23,6 +18,13 @@
   ul li span:hover {
     @apply bg-[#ffebee] text-[#e53935] rotate-90;
   }
+}
+
+/* Checked state - moved outside @layer to ensure it takes precedence */
+.checked {
+  color: #b8a3a3 !important;
+  background-color: #f9f9f9 !important;
+  text-decoration: line-through !important;
 }
 
 /* Animations */
@@ -84,7 +86,7 @@ h2::before {
 
 /* Gradient backgrounds */
 body {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #64c743 0%, #12bbc1 100%);
 }
 
 button {

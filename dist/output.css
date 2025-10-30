@@ -871,6 +871,14 @@ ul li span:hover {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* Checked state - moved outside @layer to ensure it takes precedence */
+
+.checked {
+  color: #b8a3a3 !important;
+  background-color: #f9f9f9 !important;
+  text-decoration: line-through !important;
+}
+
 /* Animations */
 
 @keyframes slideUp {
@@ -936,7 +944,7 @@ h2::before {
 /* Gradient backgrounds */
 
 body {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #64c743 0%, #12bbc1 100%);
 }
 
 button {
