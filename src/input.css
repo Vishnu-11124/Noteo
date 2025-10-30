@@ -1,3 +1,92 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  ul li {
+    @apply list-none text-[17px] py-4 pr-4 pl-5 select-none cursor-pointer relative mb-3 bg-white rounded-xl transition-all duration-300 shadow-[0_2px_8px_rgba(0,0,0,0.08)];
+  }
+
+  ul li:hover {
+    @apply translate-x-1.5 shadow-[0_4px_12px_rgba(0,0,0,0.12)];
+  }
+
+  ul li.checked {
+    @apply text-[#888] bg-[#f9f9f9];
+    text-decoration: line-through !important;
+  }
+
+  ul li span {
+    @apply absolute right-[15px] top-1/2 -translate-y-1/2 w-8 h-8 text-[22px] text-[#999] leading-8 text-center rounded-full transition-all duration-300;
+  }
+
+  ul li span:hover {
+    @apply bg-[#ffebee] text-[#e53935] rotate-90;
+  }
+}
+
+/* Animations */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes taskAppear {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.container {
+    animation: slideUp 0.5s ease-out;
+}
+
+ul li {
+    animation: taskAppear 0.3s ease-out;
+}
+
+/* Title icon */
+h2::before {
+    content: "✓";
+    width: 45px;
+    height: 45px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Empty state */
+#list-container:empty::after {
+    content: "No tasks yet. Add one to get started! 🚀";
+    display: block;
+    text-align: center;
+    color: #999;
+    padding: 40px 20px;
+    font-size: 16px;
+    font-style: italic;
+}
+
+/* Gradient backgrounds */
+body {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+button {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}

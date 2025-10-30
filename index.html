@@ -3,28 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Noteo ToDo List</title>
+    <title>Noteo - Modern Todo List</title>
     <link rel="stylesheet" href="./dist/output.css">
 </head>
-<body class="m-0 p-0 box-border">
-    <div class="w-full min-h-[100vh] bg-cyan-600 p-[10px]">
-        <div class="w-full max-w-[540px] bg-white mt-10 mx-auto mb-5 pt-6 px-[30px] pb-[70px] rounded-[10px]">
-            <h2 class="text-blue-700 flex items-center mb-5 text-xl font-bold">Noteo</h2>
-            <div class="flex items-center justify-between bg-[#edeef0] rounded-[30px] pl-5 mb-6">
-                <input class="flex-1 border-none outline-none p-[10px] bg-transparent font-[14px]" type="text" id="input-box" placeholder="Write down your task.">
-                <button class="border-none outline-none py-4 px-[50px] bg-blue-500 text-white font-semibold cursor-pointer rounded-[40px]">Add</button>
-            </div>
-            <ul id="list-container">
-
-                <!-- <li class="list-none text-base py-2 pr-2 pl-[50px] cursor-pointer select-none relative checkbox-before">Task</li>
-
-                <li class="list-none text-base py-2 pr-2 pl-[50px] cursor-pointer select-none relative checkbox-before">Task</li>
-
-                <li class="list-none text-base py-2 pr-2 pl-[50px] cursor-pointer select-none relative checkbox-before">Task</li> -->
-                
-                
-            </ul>
+<body class="m-0 box-border font-sans min-h-screen p-5 flex items-center justify-center">
+    <div class="container w-full max-w-[540px] bg-white/95 backdrop-blur-[10px] mx-auto pt-10 px-[35px] pb-20 rounded-[20px] shadow-[0_20px_60px_rgba(0,0,0,0.3)]">
+        <h2 class="text-[#667eea] flex items-center mb-[30px] text-[32px] font-bold gap-3">Noteo</h2>
+        <div class="flex items-center justify-between bg-[#f7f7f7] rounded-[50px] py-2 pr-2 pl-[25px] mb-[30px] shadow-[0_5px_15px_rgba(0,0,0,0.08)] transition-all duration-300 ease-in-out focus-within:shadow-[0_8px_25px_rgba(102,126,234,0.3)] focus-within:-translate-y-0.5">
+            <input class="flex-1 border-none outline-none bg-transparent py-3 px-2.5 text-base text-[#333] placeholder:text-[#999]" type="text" id="input-box" placeholder="Add your new task...">
+            <button class="border-none outline-none py-4 px-[50px] text-white text-base font-semibold cursor-pointer rounded-[40px] transition-all duration-300 shadow-[0_4px_15px_rgba(102,126,234,0.4)] hover:-translate-y-0.5 hover:shadow-[0_6px_20px_rgba(102,126,234,0.6)] active:translate-y-0">Add</button>
         </div>
+        <ul id="list-container" class="list-none p-0"></ul>
     </div>
     <script src="./app.js"></script>
 </body>
